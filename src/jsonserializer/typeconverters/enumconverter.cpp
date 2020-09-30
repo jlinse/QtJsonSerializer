@@ -116,17 +116,17 @@ QMetaEnum EnumConverter::getEnum(int metaTypeId, bool ser) const
 {
 	const auto mo = QMetaType::metaObjectForType(metaTypeId);
 	if (!mo)
-		throwSer(QByteArray{"Unable to get metaobject for type "} + QMetaType::typeName(metaTypeId), ser);
+    throwSer(QByteArray(QByteArray{"Unable to get metaobject for type "} + QMetaType::typeName(metaTypeId)), ser);
 	const auto enumName = QString::fromUtf8(QMetaType::typeName(metaTypeId))
 							  .split(QStringLiteral("::"))
 							  .last()
 							  .toUtf8();
 	auto mIndex = mo->indexOfEnumerator(enumName.data());
 	if (mIndex < 0) {
-		throwSer(QByteArray{"Unable to get QMetaEnum for type "} +
+    throwSer(QByteArray(QByteArray{"Unable to get QMetaEnum for type "} +
 					 QMetaType::typeName(metaTypeId) +
 					 QByteArray{" using the owning meta object "} +
-					 mo->className(),
+           mo->className()),
 				 ser);
 	}
 

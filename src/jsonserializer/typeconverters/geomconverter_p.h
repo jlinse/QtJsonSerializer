@@ -9,6 +9,7 @@
 #include <QtCore/QPoint>
 #include <QtCore/QLine>
 #include <QtCore/QRect>
+#include <variant>
 
 namespace QtJsonSerializer::TypeConverters {
 

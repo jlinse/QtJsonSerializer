@@ -5,6 +5,7 @@
 #include "typeconverter.h"
 #include "exception.h"
 
+#include <variant>
 #include <chrono>
 
 namespace QtJsonSerializer::TypeConverters {
