@@ -2,6 +2,7 @@
 #define QTJSONSERIALIZER_GLOBAL_H
 
 #include <QtCore/qglobal.h>
+#include <variant>
 
 #ifndef QT_STATIC
 #  if defined(QT_BUILD_JSONSERIALIZER_LIB)
