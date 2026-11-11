@@ -4,6 +4,7 @@
 #include "metawriters.h"
 
 #include <QtCore/QJsonArray>
+#include <QtCore/QSequentialIterable>
 using namespace QtJsonSerializer;
 using namespace QtJsonSerializer::TypeConverters;
 using namespace QtJsonSerializer::MetaWriters;

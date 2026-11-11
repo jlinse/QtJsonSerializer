@@ -3,6 +3,7 @@
 #include "cborserializer.h"
 
 #include <QtCore/QJsonObject>
+#include <QtCore/QAssociativeIterable>
 #include <QtCore/QJsonArray>
 using namespace QtJsonSerializer;
 using namespace QtJsonSerializer::TypeConverters;

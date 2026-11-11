@@ -5,6 +5,7 @@
 
 #include <QtCore/QCborStreamReader>
 #include <QtCore/QCborStreamWriter>
+#include <QtCore/QIODevice>
 #include <QtCore/QtEndian>
 using namespace QtJsonSerializer;
 
@@ -114,7 +115,7 @@ void CborSerializer::setHandleSpecialNumbers(bool handleSpecialNumbers)
 		return;
 
 	d->handleSpecialNumbers = handleSpecialNumbers;
-	emit handleSpecialNumbersChanged(d->handleSpecialNumbers, {});
+	emit handleSpecialNumbersChanged(d->handleSpecialNumbers, QPrivateSignal{});
 }
 
 bool CborSerializer::jsonMode() const
